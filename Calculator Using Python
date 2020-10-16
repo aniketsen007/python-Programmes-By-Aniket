@@ -1,0 +1,36 @@
+def sums(n1,n2):
+    n3=n1+n2
+    return n3
+
+def subs(n1,n2):
+    n3=n1-n2
+    return n3
+
+def mul(n1,n2):
+    n3=n1*n2
+    return n3
+
+def div(n1,n2):
+    n3=n1/n2
+    return n3
+
+print("WELCOMNE TO SELF-MADE CALCULATOR\n")
+print("1.Addition\n 2.Substraction\n 3.Multiplication\n 4.Division")
+for i in range(1):
+    choice=input("\nEnter your choice:")
+    if choice in ('1','2','3','4'):
+        n1=float(input("enter the first number:"))
+        n2=float(input("enter the second number:"))
+        if choice=='1':
+            print("The sum is",sums(n1,n2))
+        elif choice=='2':
+            print("The substraction is",subs(n1,n2))
+        elif choice=='3':
+            print("the multiplication is",mul(n1,n2))
+        elif choice=='4':
+            print("the division is",div(n1,n2))
+    else:
+        print("Invalid Input\n")
+
+print("Thanks for Using me\n")
+        
