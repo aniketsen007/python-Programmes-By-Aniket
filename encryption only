@@ -1,0 +1,18 @@
+import string
+def encrypt(string,shift):
+    ciper=" "
+    for char in string:
+        if char==" ":
+            ciper=ciper+"%#"
+        elif char.isupper():
+            ciper=ciper+chr((ord(char)+int(shift)-65)%26+65)
+        else:
+            ciper=ciper+chr((ord(char)+int(shift)-97)%26+97)
+    return ciper
+        
+    
+
+text=input("Enter the Text:")
+s=input("Enter the shift:")
+print("The original message is ",text)
+print("the encrypted message is ",encrypt(text,
