@@ -1,0 +1,17 @@
+import string
+text=input("Enter the Text")
+alphabets=string.ascii_letters
+print(text)
+keys=3
+encrypt=""
+decrypt=""
+for i in text:
+    pos=alphabets.find(i)
+    newpos=(pos+3)%26
+    encrypt+=alphabets[newpos]
+print(encrypt)
+for i in encrypt:
+    poss=alphabets.find(i)
+    newposs=(poss-3)%26
+    decrypt+=alphabets[newposs]
+print(decrypt)
